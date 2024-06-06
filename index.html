@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 價值觀二選一</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>價值觀二選一遊戲</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>價值觀二選一</h1>
+    <div id="playerInfo">
+        <label for="playerName">輸入你的名字：</label>
+        <input type="text" id="playerName">
+        <button onclick="startGame()">下一步</button>
+    </div>
+    <div id="introduction" style="display:none;">
+        <p>Hi！<span id="playerNameSpan"></span>，歡迎透過這個測驗，讓你更了解你的價值觀。</p>
+        <p>你是否曾經想過：<p>「有什麼樣的信念或價值觀可以拿來形容我自己？」<p>「一個真心喜歡我的朋友，會用什麼話來形容我呢？」<p>「有什麼事情是我認為最重要呢？」</p>
+        <p>請深呼吸，靜下來<p>慢慢地在接下來的5-10分鐘跟著測驗選擇你更傾向的價值觀。</p>
+        <button onclick="startTest()">開始測試</button>
+    </div>
+    <div id="game" style="display:none;">
+        <div id="choice1" class="choice">
+            <p class="value-text"></p>
+            <button class="choose-button" onclick="makeChoice(1)">選擇這個</button>
+            <button class="not-me-button" onclick="excludeOption(1)">這不像我</button>
+        </div>
+        <div id="choice2" class="choice">
+            <p class="value-text"></p>
+            <button class="choose-button" onclick="makeChoice(2)">選擇這個</button>
+            <button class="not-me-button" onclick="excludeOption(2)">這不像我</button>
+        </div>
+    </div>
+    <div id="results" style="display:none;">
+        <h2>你最優先的六項價值觀是：</h2>
+        <ol id="topValues"></ol>
+    </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
